@@ -1,0 +1,2 @@
+#3. Crear una lista de diccionarios simulando ventas. Cada diccionario debe contener el nombre del producto, la cantidad vendida y el precio unitario. 
+# Luego, calcular el total de ventas para cada producto y mostrarlo en pantalla.
