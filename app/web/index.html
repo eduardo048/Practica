@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Panel de ventas</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">FastAPI + pandas</p>
+          <h1>Panel de ventas</h1>
+        </div>
+        <a class="docs-link" href="/docs">API docs</a>
+      </header>
+
+      <section class="toolbar" aria-label="Filtros">
+        <label>
+          Producto
+          <input id="productFilter" type="search" placeholder="Portatil" />
+        </label>
+        <label>
+          Region
+          <select id="regionFilter">
+            <option value="">Todas</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Valencia">Valencia</option>
+            <option value="Sevilla">Sevilla</option>
+          </select>
+        </label>
+        <button id="applyFilters" type="button">Aplicar</button>
+      </section>
+
+      <section class="summary-grid" aria-label="Resumen">
+        <article class="metric">
+          <span>Ventas</span>
+          <strong id="rowsMetric">0</strong>
+        </article>
+        <article class="metric">
+          <span>Unidades</span>
+          <strong id="unitsMetric">0</strong>
+        </article>
+        <article class="metric">
+          <span>Ingresos</span>
+          <strong id="revenueMetric">0 EUR</strong>
+        </article>
+        <article class="metric">
+          <span>Media venta</span>
+          <strong id="averageMetric">0 EUR</strong>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <div class="panel">
+          <div class="section-heading">
+            <h2>Ventas recientes</h2>
+            <span id="statusText">Cargando</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Producto</th>
+                  <th>Categoria</th>
+                  <th>Region</th>
+                  <th>Unidades</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody id="salesTable"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <aside class="panel">
+          <div class="section-heading">
+            <h2>Por producto</h2>
+          </div>
+          <div id="productList" class="ranking"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
+
