@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 import pandas as pd
 
-from app.core.config import Settings
+from ProyectoCodexFinal.app.core.config import Settings
 
 
 REQUIRED_COLUMNS = {

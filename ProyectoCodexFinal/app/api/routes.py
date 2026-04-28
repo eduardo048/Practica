@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, Query
 
-from app.core.config import Settings, get_settings
-from app.schemas.sales import ProductSales, RegionSales, Sale, SalesSummary
-from app.services.sales_service import SalesService
+from ProyectoCodexFinal.app.core.config import Settings, get_settings
+from ProyectoCodexFinal.app.schemas.sales import ProductSales, RegionSales, Sale, SalesSummary
+from ProyectoCodexFinal.app.services.sales_service import SalesService
 
 
 router = APIRouter(tags=["sales"])

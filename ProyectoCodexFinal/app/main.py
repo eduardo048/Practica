@@ -4,8 +4,8 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from app.api.routes import router as api_router
-from app.core.config import get_settings
+from ProyectoCodexFinal.app.api.routes import router as api_router
+from ProyectoCodexFinal.app.core.config import get_settings
 
 
 WEB_DIR = Path(__file__).resolve().parent / "web"
